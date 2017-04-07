@@ -50,7 +50,7 @@ class IndexController extends Controller {
     }
 
     public function login(){
-        $this -> display();
+        $this -> display('login');
         if(!empty($_POST)){
             $users = new \Model\UsersModel();
             $rst = $users -> checkNamePwd($_POST['username'],$_POST['password']);
